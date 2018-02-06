@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #login {
+        width:350px;
+        float:left;
+        margin-left: 400px;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+      }
+    #login .btndiv{
+      margin-top: 20px;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="login">
+      <div class="">UserName</div>
+      <input type="text" name="username" id="uname">
+
+      <div class="">Password</div>
+      <input type="text" name="password" id="pass">
+      <div class="btndiv">
+        <button type="button" name="button" onclick="mylogin()">login</button>
+      </div>
+     </div>
+
+    <script type="text/javascript">
+    function mylogin(){
+       text = localStorage.getItem("regJSON");
+       obj = JSON.parse(text);
+
+       var username = document.getElementById('uname').value;
+       var password = document.getElementById('pass').value;
+
+       for(var i=0; i<obj.length; i++)
+       {
+
+          if(username == obj[i].uname && password == obj[i].pass)
+          {
+            var userData = new Object();
+            userData.id =obj[i].id;
+            userData.ename = obj[i].ename;
+            userData.uname = obj[i].uname;
+            userData.emailid = obj[i].emailid;
+
+           sessionStorage.setItem("userdata", JSON.stringify(userData));
+            window.location.assign("file:///home/rohit/my%20js%20workspace/display.html");
+          }
+
+          }
+          
+   }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    #ragistration{
+    border: 1px solid gray;
+    float: left;
+    width: 350px;
+    margin-left: 400px;
+    padding: 20px;
+    text-align: center;
+    }
+    #ragistration .empid{
+      margin-bottom: 20px;
+    }
+   #ragistration .btndiv{
+      margin-top: 20px;
+   }
+    </style>
+  </head>
+  <body>
+    <div id="ragistration">
+      <h3>Ragistration Form</h3>
+      <div class="empid">
+        <div class="labldiv">Emp Id</div>
+        <input type="text" name="empid" id="eid" placeholder="Enter Id">
+      </div>
+
+      <div class="empid">
+        <div class="labldiv">Emp Name</div>
+        <input type="text" name="ename" id="ename" placeholder="Emp Name">
+      </div>
+
+      <div class="empid">
+        <div class="labldiv">UserName</div>
+        <input type="text" name="username" id="uname" placeholder="UserName">
+      </div>
+
+      <div class="empid">
+        <div class="labldiv">Password</div>
+        <input type="text" name="password" id="pass" placeholder="Password">
+      </div>
+
+      <div class="empid">
+        <div class="labldiv">Email</div>
+        <input type="text" name="email" id="emailid" placeholder="Email">
+      </div>
+
+      <div class="btndiv">
+        <button type="button" name="button" onclick="myfun()">Ragister</button>
+         <a href="login.html">log In</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    var myarr = [];
+    function myfun()
+      {
+        console.log(1);
+        var obj = new Object();
+        obj.id = document.getElementById("eid").value;
+        obj.ename = document.getElementById("ename").value;
+        obj.uname = document.getElementById("uname").value;
+        obj.pass = document.getElementById("pass").value;
+        obj.emailid = document.getElementById("emailid").value;
+
+         
+        //var myJSON = JSON.stringify(obj);
+        myarr.push(obj);
+
+        localStorage.setItem("regJSON", JSON.stringify(myarr));
+         // var get =  JSON.parse(localStorage.getItem('user'));
+         // if(get){
+         //   get.push(obj);
+         //   localStorage.setItem('user', JSON.stringify(get));
+         // } else {
+         //   var array = [];
+         //   array.push(obj);
+         //   localStorage.setItem('user', JSON.stringify(array));
+         //  }
+
+      }
+    </script>
+  </body>
+</html>

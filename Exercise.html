@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+   table, td {
+   border: 1px solid black;
+     }
+  </style>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <button type="button" name="button" onclick="RegExp()">Replace</button>
+    <button type="button" name="button" onclick="myFunction()">Create table</button>
+
+
+    <script type="text/javascript">
+       var today = new Date();
+       var date = today.getDate();
+       var day = today.getDay();
+       var year = today.getFullYear();
+       var hour = today.getHours();
+       var minuites = today.getMinutes();
+       var seconds = today.getSeconds();
+      document.getElementById("demo").innerHTML = "Today date is:"+date+" <br\>Today day is:"+day+"<br\> year is:"+year+"<br\> hour:"+hour+" <br\>Min:"+minuites+"<br\> Sec:"+seconds;
+      var x = "a  bbbb a  vvvvv  adacs";
+      function RegExp(){
+      var y =  x.replace(/a\s/g, "the");
+      document.getElementById("demo2").innerHTML = y;
+      }
+
+      function myFunction() {
+
+      var x = document.createElement("TABLE");
+      x.setAttribute("id", "myTable");
+      document.body.appendChild(x);
+
+      var y = document.createElement("TR");
+      y.setAttribute("id", "myTr");
+      document.getElementById("myTable").appendChild(y);
+
+      var z = document.createElement("TD");
+      var t = document.createTextNode("Car Type");
+      z.appendChild(t);
+
+      var a = document.createElement("TD");
+      var b = document.createTextNode("Top  speed");
+      a.appendChild(b);
+
+      var c = document.createElement("TD");
+      var d = document.createTextNode("Price");
+      c.appendChild(d);
+
+      document.getElementById("myTr").appendChild(z);
+      document.getElementById("myTr").appendChild(a);
+      document.getElementById("myTr").appendChild(c);
+//----------------------------------------------------------------------------------
+      var x = document.createElement("TR");
+      x.setAttribute("id", "myTr1");
+      document.getElementById("myTable").appendChild(x);
+
+      var e = document.createElement("TD");
+      var f = document.createTextNode("BMW");
+      e.appendChild(f);
+
+      var g = document.createElement("TD");
+      var h = document.createTextNode("200km");
+      g.appendChild(h);function myFunction() {
+
+      var x = document.createElement("TABLE");
+      x.setAttribute("id", "myTable");
+      document.body.appendChild(x);
+
+      var y = document.createElement("TR");
+      y.setAttribute("id", "myTr");
+      document.getElementById("myTable").appendChild(y);
+
+      var z = document.createElement("TD");
+      var t = document.createTextNode("Car Type");
+      z.appendChild(t);
+
+      var a = document.createElement("TD");
+      var b = document.createTextNode("Top  speed");
+      a.appendChild(b);
+
+      var c = document.createElement("TD");
+      var d = document.createTextNode("Price");
+      c.appendChild(d);
+
+      document.getElementById("myTr").appendChild(z);
+      document.getElementById("myTr").appendChild(a);
+      document.getElementById("myTr").appendChild(c);
+//----------------------------------------------------------------------------------
+      var x = document.createElement("TR");
+      x.setAttribute("id", "myTr1");
+      document.getElementById("myTable").appendChild(x);
+
+      var e = document.createElement("TD");
+      var f = document.createTextNode("BMW");
+      e.appendChild(f);
+
+      var g = document.createElement("TD");
+      var h = document.createTextNode("200km");
+      g.appendChild(h);
+
+      var i = document.createElement("TD");
+      var j = document.createTextNode("$10000");
+      i.appendChild(j);
+
+
+      document.getElementById("myTr1").appendChild(e);
+      document.getElementById("myTr1").appendChild(g);
+      document.getElementById("myTr1").appendChild(i);
+
+//---------------------------------------------------------------
+var w = document.createElement("TR");
+w.setAttribute("id", "myTr2");
+document.getElementById("myTable").appendChild(w);
+
+var k = document.createElement("TD");
+var l = document.createTextNode("Audi");
+k.appendChild(l);
+
+var m = document.createElement("TD");
+var n = document.createTextNode("300km");
+m.appendChild(n);
+
+var o = document.createElement("TD");
+var p = document.createTextNode("$20000");
+o.appendChild(p);
+
+
+document.getElementById("myTr2").appendChild(k);
+document.getElementById("myTr2").appendChild(m);
+document.getElementById("myTr2").appendChild(o);
+  }
+
+
+      var i = document.createElement("TD");
+      var j = document.createTextNode("$10000");
+      i.appendChild(j);
+
+
+      document.getElementById("myTr1").appendChild(e);
+      document.getElementById("myTr1").appendChild(g);
+      document.getElementById("myTr1").appendChild(i);
+
+//---------------------------------------------------------------
+var w = document.createElement("TR");
+w.setAttribute("id", "myTr2");
+document.getElementById("myTable").appendChild(w);
+
+var k = document.createElement("TD");
+var l = document.createTextNode("Audi");
+k.appendChild(l);
+
+var m = document.createElement("TD");
+var n = document.createTextNode("300km");
+m.appendChild(n);
+
+var o = document.createElement("TD");
+var p = document.createTextNode("$20000");
+o.appendChild(p);
+
+
+document.getElementById("myTr2").appendChild(k);
+document.getElementById("myTr2").appendChild(m);
+document.getElementById("myTr2").appendChild(o);
+  }
+
+    </script>
+  </body>
+</html>

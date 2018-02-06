@@ -1,0 +1,88 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <input id="inputText" type="text">
+  <button onclick="pushData()">show</button>
+  <button onclick="DeleteData()">Delete</button>
+  <input type="text" placeholder="Search.." id="check">
+  <button type="submit" id="check" onclick="myFunction()"><i class="fa fa-search"></i>Find</button>
+
+  <p id="ptext"></p>
+  <p id="demo"></p>
+  <p id="check1" style="background:#ccc;"></p>
+  <p id="display"></p>
+  <script type="text/javascript">
+    var myarr = [];
+    var x;
+    var unique_array = [];
+
+    function pushData() {
+
+      var inputText = document.getElementById('inputText').value;
+      myarr.push(inputText);
+      var pval = "";
+
+
+      function removeDuplicates(arr) {
+
+
+        for (var i = 0; i < arr.length; i++) {
+          if (unique_array.indexOf(arr[i]) == -1) {
+            unique_array.push(arr[i])
+          }
+        }
+      //  x = unique_array;
+
+        //return unique_array
+        for (var i = 0; i < unique_array.length; i++) {
+          pval = pval + unique_array[i] + "<br/>";
+
+        }
+        //  console.log(x);
+        document.getElementById('ptext').innerHTML = pval;
+        //document.getElementById("display").innerHTML = unique_array
+
+      }
+
+      // console.log(x);
+      x = document.getElementById("demo").innerHTML = (removeDuplicates(myarr));      
+      document.getElementById("inputText").value = "";
+      //console.log(x);
+      //console.log(y);
+      //  localStorage.      //console.log(x);s  x=unique_array;etItem("todo", JSON.stringify(myarr));
+
+      //return x;
+    }
+    // function check(age) {AS
+    // return var y = docuconsole.elog(y);ment.getElementById("demo").value;
+    // }''
+
+    function myFunction() {
+      //  var mydata = JSON.parse(localStorage.getItem("todo"));
+
+      var y = document.getElementById("check").value;
+
+      console.log('y=', y);
+
+      document.getElementById("check1").innerHTML = unique_array.find(element => {
+        return element === y;
+      });
+      console.log(unique_array);
+    }
+
+    //   for(var i=0; i< myarr.length; i++)
+    //   {
+    //     pval = pval + myarr[i] + "<br/>";
+    //   }
+    //   document.getElementById('ptext').innerHTML = pval;
+    //
+    // }
+  </script>
+</body>
+
+</html>
